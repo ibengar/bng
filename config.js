@@ -6,16 +6,16 @@ import moment from 'moment-timezone'
 
 /*Oᴡɴᴇʀ number*/
 global.owner = [
-  ['6282195322106', '️One', true],
-  ['6282195322106', '️Two', true],
-  ['6282195322106', '️Three', true],
-  ['6282195322106', '️Four', true],
-  ['6282195322106', '️Five', true],
-  ['6282195322106', '️Six', true],
-  ['6282195322106', '️Seven', true],
-  ['6282195322106', '️Eight', true],
-  ['6282195322106', '️Nine', true],
-  ['6282195322106', '️Teen', true]
+  ['6281257172080', '️One', true],
+  ['6281257172080', '️Two', true],
+  ['6281257172080', '️Three', true],
+  ['6281257172080', '️Four', true],
+  ['6281257172080', '️Five', true],
+  ['6281257172080', '️Six', true],
+  ['6281257172080', '️Seven', true],
+  ['6281257172080', '️Eight', true],
+  ['6281257172080', '️Nine', true],
+  ['6281257172080', '️Teen', true]
 ]
 global.mods = []
 global.prems = []
@@ -50,8 +50,8 @@ global.APIs = {
 /*Apikey*/
 global.APIKeys = {
  'https://api.neoxr.my.id' : '5VC9rvNx',
- 'https://api.lolhuman.xyz' : 'ed78c137a46873c5b8e5fe3b',
- 'https://api.xteam.xyz' : 'HIRO',
+ 'https://api.lolhuman.xyz' : '85faf717d0545d14074659ad',
+ 'https://api.xteam.xyz' : 'NezukoTachibana281207',
  'https://api.zeks.xyz' : 'apivinz',
  'https://hardianto-chan.herokuapp.com' : 'hardianto',
  'https://hardianto.xyz' : 'hardianto',
@@ -66,9 +66,9 @@ global.APIKeys = {
 }
 
 /*Lolhuman*/
-global.lolkey = 'ed78c137a46873c5b8e5fe3b'
+global.lolkey = '85faf717d0545d14074659ad'
 /*Xteam*/
-global.xteamkey = 'HIRO'
+global.xteamkey = 'NezukoTachibana281207'
 /*Xcoders*/
 global.xckey = '7iyNa0qA'
 
@@ -79,34 +79,29 @@ global.xckey = '7iyNa0qA'
 '85faf717d0545d14074659ad'
 'ed78c137a46873c5b8e5fe3b'
 
--XTEAM-
-'5bd33b276d41d6b4'
-'NezukoTachibana281207'
-'HIRO'
-
 -Neoxr-
 '5VC9rvNx'
 */
 
 /*Number*/
-global.nomorbot = '6285171216276'
-global.nomorown = '6282195322106'
-global.namebot = 'ʜɪɴᴀᴛᴀ-ʙᴏᴛ'
-global.nameown = '「 Oᴡɴᴇʀ 」'
+global.nomorbot = '6289503398304'
+global.nomorown = '6281257172080'
+global.namebot = 'iBeng'
+global.nameown = '「 ibeng 」'
 
 /*Watermark*/
-global.wm = '                「 ʜɪɴᴀᴛᴀ-ʙᴏᴛ あ⁩ 」'
-global.wm2 = '꒷︶꒷꒥꒷ ‧₊˚ ꒰ฅ˘օառɛʀ˘ฅ ꒱ ‧₊˚꒷︶꒷꒥꒷'
-global.wm3 = '⫹⫺ ʜɪɴᴀᴛᴀ-ʙᴏᴛ'
+global.wm = '                「 Rizky-iBeng あ⁩ 」'
+global.wm2 = 'iBeng'
+global.wm3 = 'Rizky iBeng'
 global.botdate = `⫹⫺ Date :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}`
 global.bottime = `𝗧 𝗜 𝗠 𝗘 : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}`
 global.titlebot = `⫹⫺ Time Sever : ${moment.tz('Asia/Jakarta').format('HH:mm:ss')}\n⫹⫺ Date Server :  ${moment.tz('Asia/Jakarta').format('DD/MM/YY')}`
 
 /*Thumbnail*/
-global.thumb = 'https://i.ibb.co/ccY2Q0k/20220429-191026.jpg'
-global.imagebot = 'https://telegra.ph/file/793b6accf3758f092742a.jpg'
-global.giflogo = 'https://telegra.ph/file/a46ab7fa39338b1f54d5a.mp4'
-global.thumbs = ['https://i.ibb.co/ccY2Q0k/20220429-191026.jpg','https://telegra.ph/file/f87047ec6e5f0d4a9ea91.jpg','https://telegra.ph/file/88edbb01051b397574def.jpg','https://telegra.ph/file/7957630a57078c5ec0400.jpg']
+global.thumb = 'https://telegra.ph/file/eeb37332fa2f2c9cb064e.jpg'
+global.imagebot = 'https://telegra.ph/file/eeb37332fa2f2c9cb064e.jpg'
+global.giflogo = 'https://telegra.ph/file/eeb37332fa2f2c9cb064e.jpg'
+global.thumbs = ['https://telegra.ph/file/eeb37332fa2f2c9cb064e.jpg']
 global.fla='https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&text='
 global.flaaa = [
 'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
@@ -116,11 +111,11 @@ global.flaaa = [
 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextType=1&fillTextPattern=Warning!&fillColor1Color=%23f2aa4c&fillColor2Color=%23f2aa4c&fillColor3Color=%23f2aa4c&fillColor4Color=%23f2aa4c&fillColor5Color=%23f2aa4c&fillColor6Color=%23f2aa4c&fillColor7Color=%23f2aa4c&fillColor8Color=%23f2aa4c&fillColor9Color=%23f2aa4c&fillColor10Color=%23f2aa4c&fillOutlineColor=%23f2aa4c&fillOutline2Color=%23f2aa4c&backgroundColor=%23101820&text=']
 
 global.thumbnailUrl = [
-'https://telegra.ph/file/81260a8b9e8cff26d2b48.jpg','https://telegra.ph/file/ac4928f0824a2a0492737.jpg',
-'https://telegra.ph/file/6359b013bc7e52c3b346f.jpg','https://telegra.ph/file/d43c89a5d2da72875ec05.jpg',
-'https://telegra.ph/file/7d6c0e35f9c8f52715541.jpg','https://telegra.ph/file/ef4b742d47e6a9115e2ff.jpg',
-'https://telegra.ph/file/55e5af5f33fbd57104187.jpg','https://telegra.ph/file/af236598456b95884bd15.jpg',
-'https://telegra.ph/file/de92ed4a729887ffc974c.jpg','https://telegra.ph/file/00ce42a193b1dbbf907d4.jpg']
+'https://telegra.ph/file/eeb37332fa2f2c9cb064e.jpg',
+'https://telegra.ph/file/eeb37332fa2f2c9cb064e.jpg',
+'https://telegra.ph/file/eeb37332fa2f2c9cb064e.jpg',
+'https://telegra.ph/file/eeb37332fa2f2c9cb064e.jpg',
+'https://telegra.ph/file/eeb37332fa2f2c9cb064e.jpg']
 
 /*Thumbnail*/
 global.hoppai = ['https://telegra.ph/file/f34d76df4a2065af1a5ba.jpg',
@@ -392,13 +387,13 @@ global.hwaifu = ['https://i.pinimg.com/originals/ed/34/f8/ed34f88af161e6278993e1
 'https://i.pinimg.com/originals/80/4f/1a/804f1a05f9996c96a2d492b4854b7fd5.jpg']
 
 /*Link*/
-global.sig = 'https://www.instagram.com/notifikasi_pemberitahuan'
-global.sgh = 'https://www.github.com/AyGemuy'
+global.sig = 'https://www.instagram.com/achmdrizky148'
+global.sgh = 'https://www.github.com/ibengar'
 global.sgc = 'https://chat.whatsapp.com/BAs2c2UeLE8AaI806UWUvI'
-global.sdc = 'https://www.discord.com/wudysoft'
-global.snh = 'https://www.tiktok.com/@upload_file'
-global.sfb = 'https://www.facebook.com/'
-global.syt = 'https://www.youtube.com/'
+global.sdc = '_'
+global.snh = 'https://www.tiktok.com/@rizkyibeng'
+global.sfb = 'https://www.facebook.com/ribeng2'
+global.syt = '_'
 
 /*Nsfw*/
 global.optsnsfw = true
@@ -414,7 +409,7 @@ global.drtf = 'text/rtf'
 /*Fake*/
 global.fsizedoc = '1'.repeat(10)
 global.fpagedoc = '1'.repeat(10)
-global.thumbdoc = 'https://telegra.ph/file/6e45318d7c76f57e4a8bd.jpg'
+global.thumbdoc = 'https://telegra.ph/file/eeb37332fa2f2c9cb064e.jpg'
 
 /*Hiasan*/
 global.dmenut = '❏─┅──┅〈'
@@ -439,32 +434,32 @@ global.htjava = '⫹⫺'
 
 /*Watermark*/
 global.stickpack = '.'
-global.stickauth = `☂︎ 𝗛𝗶𝗻𝗮𝘁𝗮 乂 𝘄𝘂𝗱𝘆𝘀𝗼𝗳𝘁\n⫹⫺ 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩\nwa.me/${global.nomorbot}`
+global.stickauth = `☂︎ iBeng-Botz\n⫹⫺ 𝐖𝐡𝐚𝐭𝐬𝐚𝐩𝐩\nwa.me/${global.nomorbot}`
 global.packname = '☂︎ ᴄʀᴇᴀᴛᴇᴅ ʙʏ'
-global.author = '𝗛𝗶𝗻𝗮𝘁𝗮 乂 𝘄𝘂𝗱𝘆𝘀𝗼𝗳𝘁'
+global.author = 'Rizky ibeng'
 global.multiplier = 10
 
 /*Pesan*/
 global.eror = '*ᴇʀᴏʀʀ!*'
 global.wait = '*ᴡᴀɪᴛ!*'
 global.render = '*ʀᴇɴᴅᴇʀ!*'
-global.webs = 'https://s.id/Cerdasin62'
+global.webs = 'https://facebook.com/ribeng2'
 global.logo = 'https://i.pinimg.com/564x/f7/d2/e4/f7d2e48fd59a8c01cd396bfc70b0a2d1.jpg'
-global.gcwangsaf = 'https://chat.whatsapp.com/Fxz8FpQ0ddr2GrEjfYkJ1E'
+global.gcwangsaf = 'https://chat.whatsapp.com/J1Zig8VE7klDHUb35YVj9L'
 
 /*Donasi*/
-global.saweria = 'https://saweria.co/wudysoft'
-global.dana = '0887435373103'
-global.pulsa = '082195322106'
-global.trakteer = 'https://trakteer.id/wudysoft'
-global.paypal = 'wudysoft@mail.com'
-global.gopay = '082195322106'
-global.pdana = '0887435373103'
-global.povo = '082195322106'
-global.pgopay = '082195322106'
-global.ppulsa = '082195322106'
-global.ppulsa2 = '082195322106'
-global.psaweria = 'https://saweria.com/Wudysoft'
+global.saweria = '_'
+global.dana = '081257172080'
+global.pulsa = '081257172080'
+global.trakteer = '_'
+global.paypal = '_'
+global.gopay = '081257172080'
+global.pdana = '081257172080'
+global.povo = '081257172080'
+global.pgopay = '081257172080'
+global.ppulsa = '081257172080'
+global.ppulsa2 = '081257172080'
+global.psaweria = '_'
 
 /*Emoji*/
 global.rpg = {
