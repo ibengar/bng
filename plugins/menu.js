@@ -55,8 +55,7 @@ Hai, %name! %ucapan
 *Language:* Javascript,Ts-Node
 *Fitur:* %totalfeatures command
 
-%readmore
-*Support me:* _https://s.id/Cerdasin62_
+
 *Note:*
 _Jika Respon Tidak Muncul Kemungkinan Terjadi Error_
 `.trimStart(),
