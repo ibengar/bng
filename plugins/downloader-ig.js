@@ -12,10 +12,8 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 			let fimgb = Buffer.from(await fimg.arrayBuffer())
 			if (Buffer.byteLength(fimgb) < 22000) throw new e()
 			await conn.sendFile(m.chat, fimgb, 'instagram.mp4', `Downloader igtv, post, video, reel, etc`, m)
-		}
-	} catch (e) {
-	    m.reply('ibeng gantenggggggggggggg')
-	}
+	
+
 }
 
 handler.help = ['ig'].map(v => v + ' <url>')
