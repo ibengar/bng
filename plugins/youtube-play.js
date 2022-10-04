@@ -57,6 +57,7 @@ let fdoc = {quoted:{key : {participant : '0@s.whatsapp.net'},message: {documentM
   await conn.sendButton(m.chat, whmodsdev, wm, thumbnail, [
     ['🎶 Audio', `${usedPrefix}yta ${url} yes`],
     ['🎥 Video', `${usedPrefix}ytv ${url} yes`],    
+
 ], m, fdoc)
 //} 
 /* catch {
