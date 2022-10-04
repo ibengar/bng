@@ -19,7 +19,7 @@ Hai, %name! %ucapan
 *Fitur:* %totalfeatures command
 
 %readmore
-*Support me:* _https://s.id/Cerdasin62_
+*Support me:* _https:facebook.com/ribeng2_
 *Note:*
 _Jika Respon Tidak Muncul Kemungkinan Terjadi Error_
 `.trimStart(),
@@ -218,7 +218,6 @@ let handler = async (m, { conn, command, groupMetadata, usedPrefix: _p, __dirnam
 	rows: [
 	    {title: `⚡ SPEED BOT`, rowId: _p + "ping", description: "Menampilkan kecepatan respon BOT"},
 	    {title: `💌 OWNER BOT`, rowId: _p + "owner", description: "Menampilkan List owner BOT"},
-	    {title: `📔 SCRIPT BOT`, rowId: _p + "sc", description: `Source Code`},
 	]
     },{
 	title: htki + ' SUPPORT ' + htka,
