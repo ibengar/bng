@@ -16,13 +16,13 @@ ${pickRandom(global.bacot)}
             templateButtons: [
                 {
                     urlButton: {
-                        displayText: '🌎 OFFICIAL GROUP',
+                        displayText: '',
                         url: sgc
                     }
                 },
                 {
                     urlButton: {
-                        displayText: '📷 FOLLOW ME',
+                        displayText: '📷 '',
                         url: sig
                     }
                 },
