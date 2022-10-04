@@ -15,7 +15,7 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
         if (isBotAdmin && bot.restrict) {
             // await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
     global.db.data.users[m.sender].warn += 1
-    global.db.data.users[m.sender].banned = true
+    global.db.data.users[m.sender].banned = false
     return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
         } else if (!bot.restrict) return m.reply('Semoga harimu suram!')
     }
