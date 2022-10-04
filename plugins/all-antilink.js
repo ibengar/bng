@@ -3,7 +3,7 @@ const isLinkYt = /youtube.com|youtu.be/i // tambahin sendiri
 const isLinkTel = /t.me/i // tambahin sendiri
 const isLinkFb = /facebook.com|fb.me/i // tambahin sendiri
 const isLinkIg = /instagram.com/i // tambahin sendiri
-const isLinkWa = /tiktok.com/i // tambahin sendiri
+const isLinkWa = /chat.whatsapp.com\/(?:invite\/)?([0-9A-Za-z]{20,24})/i // tambahin sendiri
 const isLinkHttp = /http|https/i // tambahin sendiri
 
 export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBotAdmin }) {
@@ -15,6 +15,7 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
     let bot = global.db.data.settings[this.user.jid] || {}
     const isAntiLinkTik = isLinkTik.exec(m.text)
     const isAntiLinkYt = isLinkYt.exec(m.text)
+    const isAntiLinkWa = isLinkWa.exec(m.text)
     const isAntiLinkTel = isLinkTel.exec(m.text)
     const isAntiLinkFb = isLinkFb.exec(m.text)
     const isAntiLinkIg = isLinkIg.exec(m.text)
@@ -25,7 +26,7 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
         await conn.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinktik', '/disable antilinktik'], m)
         if (isBotAdmin && bot.restrict) {
     user.warn += 1
-    user.banned = true
+    user.banned = false
     return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         } else if (!bot.restrict) return m.reply('*Anda Atmin Anda Aman :v!*!')
@@ -35,7 +36,7 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
         await conn.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkyt', '/disable antilinkyt'], m)
         if (isBotAdmin && bot.restrict) {
     user.warn += 1
-    user.banned = true
+    user.banned = false
     return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         } else if (!bot.restrict) return m.reply('*Anda Atmin Anda Aman :v!*!')
@@ -45,7 +46,7 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
         await conn.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinktel', '/disable antilinktel'], m)
         if (isBotAdmin && bot.restrict) {
     user.warn += 1
-    user.banned = true
+    user.banned = false
     return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         } else if (!bot.restrict) return m.reply('*Anda Atmin Anda Aman :v!*!')
@@ -55,7 +56,7 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
         await conn.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkfb', '/disable antilinkfb'], m)
         if (isBotAdmin && bot.restrict) {
     user.warn += 1
-    user.banned = true
+    user.banned = false
     return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         } else if (!bot.restrict) return m.reply('*Anda Atmin Anda Aman :v!*!')
@@ -65,27 +66,28 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
         await conn.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkig', '/disable antilinkig'], m)
         if (isBotAdmin && bot.restrict) {
     user.warn += 1
-    user.banned = true
+    user.banned = false
     return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         } else if (!bot.restrict) return m.reply('*Anda Atmin Anda Aman :v!*!')
     }
     
-    if (chat.antiLinkWa && isAntiLinkWa) {
-        await conn.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antilinkwa', '/disable antilinkwa'], m)
+    if (chat.antiLinkWa && isGroupLink && !isAdmin) {
+        if (isBotAdmin) {
+            const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
+            if (m.text.includes(linkThisGroup)) return !0
+        }
+        await conn.sendButton(m.chat, `*Group link detect!*${isBotAdmin ? '' : '\n\n_Bot not admin_  t_t'}`, author, ['off antilink', '/disable antilink'], m)
         if (isBotAdmin && bot.restrict) {
-    user.warn += 1
-    user.banned = true
-    return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
-    return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (!bot.restrict) return m.reply('*Anda Atmin Anda Aman :v!*!')
+            await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+        } else if (!bot.restrict) return m.reply('Owner disable auto kick!')
     }
-    
+
     if (chat.antiLinkHttp && isAntiLinkHttp) {
         await conn.sendButton(m.chat, `*Link Terdeteksi!* ${isBotAdmin ? '' : '\n\n_Bot bukan atmin_'}`, author, ['off antihatetepe', '/disable antihatetepe'], m)
         if (isBotAdmin && bot.restrict) {
     user.warn += 1
-    user.banned = true
+    user.banned = false
     return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
     return conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         } else if (!bot.restrict) return m.reply('*Anda Atmin Anda Aman :v!*!')
