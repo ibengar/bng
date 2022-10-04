@@ -7,7 +7,7 @@ try {
   if (!vid) throw 'Video/Audio Tidak ditemukan'
   let { title, description, thumbnail, videoId, durationH, viewH, publishedTime } = vid
   const url = 'https://www.youtube.com/watch?v=' + videoId
-  await conn.sendHydrated(m.chat, `*YOUTUBE DOWNLOADER*
+  await conn.senButtonImg(m.chat, `*YOUTUBE DOWNLOADER*
 📌 *Title:* ${title}
 🔗 *Url:* ${url}
 🖹 *Description:* ${description}
