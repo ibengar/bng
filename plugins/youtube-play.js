@@ -14,7 +14,7 @@ try {
 ⏲️ *Published:* ${publishedTime}
 ⌚ *Duration:* ${durationH}
 👁️ *Views:* ${viewH}
-  `.trim(), author, thumbnail, url, '📺Go To Youtube!', null, null, [
+  `.trim(), author, thumbnail, url, '', null, null, [
     ['Audio 🎧', `${usedPrefix}yta ${url} yes`],
     ['Video 🎥', `${usedPrefix}ytv ${url} yes`],
     
