@@ -1,47 +1,48 @@
-import fetch from 'node-fetch'
-let handler = async(m, {
-	conn, text, usedPrefix, command, args
-}) => {
+let handler = async(m, { conn, text, usedPrefix }) => {
+let [number, pesan] = text.split `|`
 
-	if (args.length > 14) throw 'Nomor Kepanjangan'
-	if (args.length < 7) throw 'Nomor Kependekan'
-	if (args[0].startsWith('0')) throw 'Gunakan format 62'
-	if (!args[0]) throw 'Masukkan Teks'
-	
-    let mention = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : args[0] ? (args[0].replace(/[@ .+-]/g, '') + '@s.whatsapp.net') : ''
-	let txt = (args.length > 1 ? args.slice(1).join(' ') : '') || ''
-	let q = m.quoted ? m.quoted : m
-	let mime = (q.msg || q).mimetype || ''
-	let tujuan = `👋 Saya *${conn.user.name}*, Pesan Untuk Kamu
-👥 Dari : *PENGIRIM RAHASIA*
+    if (!number) return conn.reply(m.chat, 'Maaf Format Anda Salah\n\nContoh:\n.menfess 62××××|hallo sayang', m)
+    if (!pesan) return conn.reply(m.chat, 'Maaf Format Anda Salah\n\nContoh:\n.menfess 62××××|hallo sayang', m)
+    if (text > 500) return conn.reply(m.chat, 'Teks Kepanjangan!', m)
+    
+    let user = global.db.data.users[m.sender]
 
-${htki} 💌 Pesan ${htka}
-${htjava} ${txt}
-`
-	let cap = `${htki} PESAN RAHASIA ${htka}
+    let korban = `${number}`
+    var nomor = m.sender
+    let spam1 = `Hi Saya Bot Ada Yang Kirim Pesan Ke Kamu
+Seseorang Temanmu
+(Pengirim Rahasia)
+⬡──⬡─────────⬡──⬡
+📫Pengirim : Someone
+
+💌 Pesan : ${pesan}
+⬡──⬡─────────⬡──⬡
+Maaf Anda Belum Bisa Membalas ke Pengirim
+
+------------------------------------------
+
+▮PENGIRIM RAHASIA 」 
 Anda Ingin Mengirimkan Pesan ke pacar/sahabat/teman/doi/
 mantan?, tapi Tidak ingin tau siapa Pengirimnya?
 Kamu bisa menggunakan Bot ini
-Contoh Penggunaan: ${usedPrefix + command} ${nomorown} pesan untuknya
+Contoh Penggunaan: .menfess nomor|pesan untuknya
+Contoh: .menfess 628xxxxxxxxxx|hai owner`
 
-Contoh: ${usedPrefix + command} ${nomorown} hai`
-	if (!m.quoted) {
-		await conn.sendButton(mention, tujuan, cap, null, [['Menu', '/menu']], m)
-	} else {
-		await conn.sendButton(mention, tujuan, cap, null, [['Menu', '/menu']], m)
-		let media = q ? await m.getQuotedObj() : false || m
-		await conn.copyNForward(mention, media, false).catch(_ => _)
-	}
-	let suks = `Mengirim Pesan *${mime ? mime : 'Teks'}*
-👥 Dari : @${m.sender.replace(/@.+/, '')}
-👥 Untuk : @${mention.replace(/@.+/, '')}
+    conn.reply(korban + '@s.whatsapp.net', spam1, m)
 
-${htki} 💌 Pesan ${htka}
-${htjava} ${txt}
-`
-	await conn.sendButton(m.chat, suks, wm, null, [['Menu', '/menu']], m, { mentions: conn.parseMention(suks) })
+    let logs = `Sukses Mengirim Pesan
+👥 Dari : wa.me/${nomor.split("@s.whatsapp.net")[0]}
+⬡──⬡─────────⬡──⬡
+💌 Isi Pesan : ${pesan}
+⬡──⬡─────────⬡──⬡`
+
+    conn.reply(m.chat, logs, m)
 }
-handler.help = ['menfess <pesan>']
+handler.help = ['menfess nomor|pesan']
 handler.tags = ['main']
-handler.command = /^(men(fess?|cret)|chat)$/i
+
+handler.command = /^(menfess|confess|menfes|confes)$/i
+
+handler.limit = true
+handler.private = true
 export default handler
