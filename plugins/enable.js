@@ -13,7 +13,6 @@ let name = await conn.getName(who)
 "Anti LinkIg",
 "Anti LinkTel",
 "Anti LinkTik",
-"Anti LinkWa",
 "Anti LinkYt",
 "Anti Satir",
 "Anti Spam",
@@ -55,7 +54,6 @@ let idop = ["anticall",
 "antilinkig",
 "antilinktel",
 "antilinktik",
-"antilinkwa",
 "antilinkyt",
 "antisatir",
 "antispam",
@@ -97,7 +95,6 @@ let desop = ["Memblokir user jika menelpon bot",
 "Jangan kirim link Ig",
 "Jangan kirim link Tel",
 "Jangan kirim link Tik",
-"Jangan kirim link Wa",
 "Jangan kirim link Yt",
 "Jangan meng Satir",
 "Jangan meng Spam",
@@ -527,5 +524,6 @@ let row = Object.keys(namop, desop, idop).map((v, index) => ({
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff)|[01])$/i
-
+handler.owner = true
+handler.admin = true
 export default handler
