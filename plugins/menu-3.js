@@ -18,8 +18,8 @@ Hai, %name! %ucapan
 *Language:* Javascript,Ts-Node
 *Fitur:* %totalfeatures command
 
-%readmore
-*Support me:* _https:facebook.com/ribeng2_
+
+*REST API GRATIS:* _https://ibeng-api.ddns.net_
 *Note:*
 _Jika Respon Tidak Muncul Kemungkinan Terjadi Error_
 `.trimStart(),
