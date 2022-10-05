@@ -14,8 +14,8 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
         if (isAdmin || !isBotAdmin){		  
         } else {
           m.reply('*Sticker lu meresahkan*') // ganti text terserah kamu 
-          global.db.data.users[m.sender].warn += 1
-    global.db.data.users[m.sender].banned = false
+        //  global.db.data.users[m.sender].warn += 1
+  //  global.db.data.users[m.sender].banned = false
     return conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
         }return true
       }
