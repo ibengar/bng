@@ -15,7 +15,6 @@ handler.help = ['kick', '-'].map(v => 'o' + v + ' @user')
 handler.tags = ['owner']
 handler.command = /^g?kick$/i
 
-handler.owner = true
 handler.group = true
 handler.admin = true
 
