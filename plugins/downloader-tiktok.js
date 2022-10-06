@@ -7,7 +7,16 @@ try {
 let p = await tiktok(args[0])
     if (!p.link) throw 'Can\'t download video!'
     let cap = `*「 T I K T O K 」*
-                 
+                 ████████▀▀▀████
+                 ████████────▀██
+                 ████████──█▄──█
+                 ███▀▀▀██──█████
+                 █▀──▄▄██──█████
+                 █──█████──█████
+                 █▄──▀▀▀──▄█████
+                 ███▄▄▄▄▄███████
+──────────────────────────
+
 *📛Nickname:* ${p.dev}
 *📒Description:* ${p.description}
 *Url:* ${p.url}
@@ -20,6 +29,6 @@ conn.send2ButtonVid(m.chat, p.link, cap, author, `No Wm`, `.tiktok ${args[0]}`, 
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 
-handler.command = /^tt(tiktok(d(own(load(er)?)?|l))?|td(own(load(er)?)?|l))$/i
+handler.command = /^t(iktok(d(own(load(er)?)?|l))?|tt(own(load(er)?)?|l))$/i
 
 export default handler
