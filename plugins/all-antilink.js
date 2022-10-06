@@ -39,6 +39,6 @@ export async function before(m, { conn, args, usedPrefix, command, isAdmin, isBo
 		} else if (chat.antiLinkHttp && isAntiLinkHttp) {
 		await conn.sendButton(m.chat, bwah, author, ['off antihatetepe', '/disable antihatetepe'], m)
 			if (isBotAdmin) await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: hapus }})
-		
+	}	
 	return !0
 }
