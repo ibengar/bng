@@ -14,7 +14,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 			await conn.sendFile(m.chat, fimgb, '', `Downloader igtv, post, video, reel, etc`, m)
 		}
 	
-}
+
 
 handler.help = ['ig'].map(v => v + ' <url>')
 handler.tags = ['downloader']
