@@ -21,7 +21,7 @@ let p = await tiktok(args[0])
 *📒Description:* ${p.description}
 *Url:* ${p.url}
 `.trim()
-conn.send2ButtonVid(m.chat, p.link, cap, author, ``, ``, `Audio`, `.tiktokaudio ${args[0]}`, fakes, adReply)
+conn.send2ButtonVid(m.chat, p.link, cap, author, `Audio`, `.tiktokaudio ${args[0]}`, fakes, adReply)
 } catch (e) {
     throw eror
     }
@@ -29,6 +29,6 @@ conn.send2ButtonVid(m.chat, p.link, cap, author, ``, ``, `Audio`, `.tiktokaudio 
 handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
 
-handler.command = /^t(iktok(d(own(load(er)?)?|l))?|td(own(load(er)?)?|l))$/i
+handler.command = /^tt(tiktok(d(own(load(er)?)?|l))?|td(own(load(er)?)?|l))$/i
 
 export default handler
