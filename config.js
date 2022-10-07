@@ -388,7 +388,7 @@ global.hwaifu = ['https://i.pinimg.com/originals/ed/34/f8/ed34f88af161e6278993e1
 
 /*Link*/
 global.sig = 'https://www.instagram.com/achmdrizky148'
-global.sgh = 'https://www.github.com/ibengar'
+global.sgh = 'https://ibeng-api.ddns.net'
 global.sgc = 'https://chat.whatsapp.com/BAs2c2UeLE8AaI806UWUvI'
 global.sdc = '_'
 global.snh = 'https://www.tiktok.com/@rizkyibeng'
