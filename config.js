@@ -84,7 +84,7 @@ global.xckey = '7iyNa0qA'
 */
 
 /*Number*/
-global.nomorbot = '6289503398304'
+global.nomorbot = '6283840017405'
 global.nomorown = '6281257172080'
 global.namebot = 'iBeng'
 global.nameown = '「 ibeng 」'
