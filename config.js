@@ -7,7 +7,7 @@ import moment from 'moment-timezone'
 /*Oᴡɴᴇʀ number*/
 global.owner = [
   ['6281257172080', '️One', true],
-  ['6281257172080', '️Two', true],
+  ['6283116898720', '️Two', true],
   ['6281257172080', '️Three', true],
   ['6281257172080', '️Four', true],
   ['6281257172080', '️Five', true],
@@ -389,7 +389,7 @@ global.hwaifu = ['https://i.pinimg.com/originals/ed/34/f8/ed34f88af161e6278993e1
 /*Link*/
 global.sig = 'https://www.instagram.com/achmdrizky148'
 global.sgh = 'https://ibeng-api.ddns.net'
-global.sgc = 'https://chat.whatsapp.com/BAs2c2UeLE8AaI806UWUvI'
+global.sgc = 'https://chat.whatsapp.com/J1Zig8VE7klDHUb35YVj9L'
 global.sdc = '_'
 global.snh = 'https://www.tiktok.com/@rizkyibeng'
 global.sfb = 'https://www.facebook.com/ribeng2'
