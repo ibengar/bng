@@ -5,7 +5,7 @@ let handler = m => m
 handler.all = async function (m, { isBlocked }) {
     if (isBlocked) return
 
-   let regs = /(ผิดุท้เึางืผิดุท้เึางื)/i
+   let regs = /(🗿)/i
    let isVertexThai = regs.exec(m.text)
    if (isVertexThai && !m.fromMe) {
    conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
@@ -17,7 +17,7 @@ handler.all = async function (m, { isBlocked }) {
    conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
    }
    
-   let regp = /(๒๒)/i
+   let regp = /(🗿)/i
    let isVertexsThai= regp.exec(m.text)
    if (isVertexsThai && !m.fromMe) {
    conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
