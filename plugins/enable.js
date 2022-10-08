@@ -10,7 +10,7 @@ let name = await conn.getName(who)
 "Anti Delete",
 "Anti Link",
 "Anti LinkFb",
-"Anti LinkIg",
+"Anti LinkBatu",
 "Anti LinkTel",
 "Anti LinkTik",
 "Anti LinkYt",
@@ -51,7 +51,7 @@ let idop = ["anticall",
 "antidelete",
 "antihatetepe",
 "antilinkfb",
-"antilinkig",
+"antilinkbatu",
 "antilinktel",
 "antilinktik",
 "antilinkyt",
@@ -92,7 +92,7 @@ let desop = ["Memblokir user jika menelpon bot",
 "Bot meneruskan pesan yang user hapus",
 "Jangan kirim link",
 "Jangan kirim link Fb",
-"Jangan kirim link Ig",
+"Jangan kirim batu🗿 ",
 "Jangan kirim link Tel",
 "Jangan kirim link Tik",
 "Jangan kirim link Yt",
@@ -261,7 +261,7 @@ let row = Object.keys(namop, desop, idop).map((v, index) => ({
           throw false
         }
       }
-      chat.antiLinkIg = isEnable
+      chat.antiLinkBatu = isEnable
       break
       case 'antilinkwa':
       if (m.isGroup) {
