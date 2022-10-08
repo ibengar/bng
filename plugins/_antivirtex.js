@@ -11,7 +11,7 @@ handler.all = async function (m, { isBlocked }) {
    conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
    }
    
-   let regk = /(♚㜸ཽཽࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧ͢͢㜺ࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩࣩࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧࣧ㜸ཽཽཽ͢͢͢♚)/i
+   let regk = /(🗿)/i
    let isVertexSymbol = regk.exec(m.text)
    if (isVertexSymbol && !m.fromMe) {
    conn.groupParticipantsUpdate(m.chat, [m.sender], "remove")
