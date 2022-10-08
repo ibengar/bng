@@ -254,7 +254,7 @@ let row = Object.keys(namop, desop, idop).map((v, index) => ({
       }
       chat.antiLinkFb = isEnable
       break
-      case 'antilinkig':
+      case 'antilinkbatu':
       if (m.isGroup) {
         if (!(isAdmin || isOwner)) {
           global.dfail('admin', m, conn)
