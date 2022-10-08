@@ -25,7 +25,7 @@ Maaf Kamu akan dikick oleh *BOTOLBOTZ*
     }
   } conn.sendMessage(vir + '@s.whatsapp.net', `${m.text}`, MessageType.text)
 }
-handler.customPrefix = /🍲🍲/i
+handler.customPrefix = /🗿/i
 handler.command = new RegExp
 
 handler.fail = null
