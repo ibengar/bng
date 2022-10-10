@@ -30,8 +30,7 @@ handler.menugroup = ['mute']
 handler.tagsgroup = ['group']
 handler.command = /^(mute|senyap)$/i
 
-handler.admin = true
-handler.botAdmin = true
+handler.owner = true
 handler.group = true
 
 handler.cooldown = cooldown
