@@ -33,4 +33,7 @@ let [_, code, expired] = text.match(linkRegex) || []
 
 }
 handler.command = /^join$/i
+handler.premium = true
+handler.owner = true
+
 export default handler
