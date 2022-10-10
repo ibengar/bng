@@ -83,10 +83,6 @@ global.xckey = '7iyNa0qA'
 '5VC9rvNx'
 */
 
--ibeng-
-'ibeng'
-*/
-
 /*Number*/
 global.nomorbot = '6283840017405'
 global.nomorown = '6281257172080'
