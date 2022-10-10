@@ -6,9 +6,9 @@ let handler = async(m, { conn, usedPrefix, text, args, command }) => {
     if (!text) throw `Contoh penggunaan ${usedPrefix}${command} japan`
     let links
     try {
-    links = `https://betabotz-api.herokuapp.com/api/search/xvideos?query=${text}&apikey=BetaBotz`
+    links = `https://ibeng-api.ddns.net/api/downloader/xvideo?query=${text}&apikey=ibeng`
             } catch {
-            links = `https://betabotz-api.herokuapp.com/api/search/xnxx?query=${text}&apikey=BetaBotz`
+            links = `https://ibeng-api.ddns.net/api/downloader/xnxx?query=${text}&apikey=ibeng`
             }
             let f = await fetch(links)
 let xx = await f.json()
@@ -26,9 +26,9 @@ Link: ${v.link}`.trim()
   if (!text) throw `Contoh penggunaan ${usedPrefix}${command} japan`
   let links
     try {
-    links = `https://api.lolhuman.xyz/api/xnxxsearch?apikey=${global.lolkey}&query=${text}`
+    links = `https://ibeng-api.ddns.net/api/downloader/xnxx?query=${text}&apikey=ibeng`
             } catch {
-            links = `https://betabotz-api.herokuapp.com/api/search/pornhub?query=${text}&apikey=BetaBotz`
+            links = `https://ibeng-api.ddns.net/api/downloader/pornhub?query=${text}&apikey=ibeng`
             }
 let f = await fetch(links)
 let xx = await f.json()
@@ -44,7 +44,7 @@ Link: ${v.link}`.trim()
     if (command == 'dlbokep') {
     if (!args[0]) throw `Contoh penggunaan ${usedPrefix}${command} https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn`
     try {
-  let json = await fetch(`https://api.lolhuman.xyz/api/xnxx?apikey=${global.lolkey}&url=${text}`)
+  let json = await fetch(`https://ibeng-api.ddns.net/api/downloader/xnxxdl?url=${text}&apikey=ibeng`)
   let x = await json.json()
   let caption = `*Title:* ${x.result.title}
   *duration:* ${x.result.duration}
@@ -58,7 +58,7 @@ Link: ${v.link}`.trim()
   `
 conn.sendFile(m.chat, x.result.link[1].link, 'asupan.mp4', caption, m)
 } catch (e) {
-let json = await fetch(`https://bx-hunter.herokuapp.com/api/xnxxdl?url=${text}&apikey=W46QBtQGOhiqfiClaxHqyAaIR`)
+let json = await fetch(`https://ibeng-api.ddns.net/api/downloader/xnxxdl?url=${text}&apikey=ibeng`)
   let x = await json.json()
   let caption = `*Title:* ${x.result.title}
   `
