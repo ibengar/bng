@@ -30,7 +30,7 @@ global.APIs = {
  dhnjing : 'https://dhnjing.xyz',
  dzx : 'https://api.dhamzxploit.my.id',
  erdwepe : 'https://erdwpe-api.herokuapp.com',
- fdci : 'https://api.fdci.se',
+ ibeng : 'https://ibeng-api.ddns.net',
  hardianto : 'https://hardianto.xyz',
  jonaz : 'https://jonaz-api-v2.herokuapp.com',
  LeysCoder : 'https://leyscoders-api.herokuapp.com',
@@ -53,7 +53,7 @@ global.APIKeys = {
  'https://api.lolhuman.xyz' : '85faf717d0545d14074659ad',
  'https://api.xteam.xyz' : 'NezukoTachibana281207',
  'https://api.zeks.xyz' : 'apivinz',
- 'https://hardianto-chan.herokuapp.com' : 'hardianto',
+ 'https://ibeng-api.ddns.net' : 'ibeng',
  'https://hardianto.xyz' : 'hardianto',
  'https://leyscoders-api.herokuapp.com' : 'MIMINGANZ',
  'https://melcanz.com' : 'manHkmst',
@@ -81,6 +81,10 @@ global.xckey = '7iyNa0qA'
 
 -Neoxr-
 '5VC9rvNx'
+*/
+
+-ibeng-
+'ibeng'
 */
 
 /*Number*/
