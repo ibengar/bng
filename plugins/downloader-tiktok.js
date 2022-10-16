@@ -1,12 +1,11 @@
-import fetch from 'node-fetch'
-import axios from 'axios'
-import { tiktok } from "social_media_downloader"
-let handler = async (m, { conn, usedPrefix, command, text, args }) => {
-if (!args[0]) throw 'Masukkan Link'
-try {
-let p = await tiktok(args[0])
-    if (!p.link) throw 'Can\'t download video!'
-    let cap = `*「 T I K T O K 」*
+import { tiktokdl } from '@bochilteam/scraper'
+
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
+    const { author: { nickname }, video, description } = await tiktokdl(args[0])
+    const url = video.no_watermark || video.no_watermark2 || video.no_watermark_raw
+    if (!url) throw 'Can\'t download video!'
+    conn.sendFile(m.chat, url, 'tiktok.mp4', `*「 T I K T O K 」*
                  ████████▀▀▀████
                  ████████────▀██
                  ████████──█▄──█
@@ -15,20 +14,18 @@ let p = await tiktok(args[0])
                  █──█████──█████
                  █▄──▀▀▀──▄█████
                  ███▄▄▄▄▄███████
-──────────────────────────
+──────────────────────────*
 
-*📛Nickname:* ${p.dev}
-*📒Description:* ${p.description}
-*Url:* ${p.url}
-`.trim()
-conn.send2ButtonVid(m.chat, p.link, cap, author, `No Wm`, `.tiktok ${args[0]}`, `Audio`, `.tiktokaudio ${args[0]}`, fakes, adReply)
-} catch (e) {
-    throw eror
-    }
+*📛Nickname:* ${nickname}
+*📒Description:* ${description}
+
+_https://facebook.com/ribeng2/_
+`.trim(), m)
 }
-handler.help = ['tiktok'].map(v => v + ' <url>')
+handler.help = ['tiktok', 'tiktok', 'tiktokdl'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-
-handler.command = /^t(iktok(d(own(load(er)?)?|l))?|td(own(load(er)?)?|l))$/i
+handler.command = /^(tik(tok)?(tok)?(dl)?)$/i
 
 export default handler
+
+//BY FANGZ
