@@ -73,7 +73,6 @@
         "hxz-api": "*",
         "jimp": "*",
         "jsdom": "*",
-        "knights-canvas": "*",
         "lodash": "*",
         "lowdb": "*",
         "mime-types": "*",
