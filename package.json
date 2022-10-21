@@ -78,7 +78,7 @@
         "lowdb": "*",
         "mime-types": "*",
         "moment-timezone": "*",
-        "mongoose": "*",
+        "mongoose": "github:Automattic/mongoose",
         "nhentai-node-api": "*",
         "node-fetch": "*",
         "node-gtts": "*",
