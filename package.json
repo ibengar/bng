@@ -72,6 +72,7 @@
         "human-readable": "*",
         "hxz-api": "*",
         "jimp": "*",
+        "knights-canvas": "*",
         "jsdom": "*",
         "lodash": "*",
         "lowdb": "*",
