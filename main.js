@@ -26,6 +26,7 @@ import syntaxerror from 'syntax-error'
 import { tmpdir } from 'os'
 import { format } from 'util'
 import { makeWASocket, protoType, serialize } from './lib/simple.js'
+import { Low } from 'lowdb'
 import {
   mongoDB,
   mongoDBV2
