@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, args }) => {
 if (!args[0]) throw 'Uhm..url nya mana?'
 m.reply('Tunggu sebentar...')
-let res = await fetch(`https://fatiharridho.herokuapp.com/api/downloader/tiktok?url=${args[0]}`)
+let res = await fetch(`https://malesin.xyz/tiktok?url=${args[0]}`)
 if (!res.ok) throw await res.text()
 let json = await res.json()
 if (!json.status) throw json
