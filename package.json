@@ -71,6 +71,7 @@
         "google-play-scraper": "*",
         "human-readable": "*",
         "hxz-api": "*",
+        "instagram-url-direct": "*",
         "jimp": "*",
         "jsdom": "*",
         "knights-canvas": "*",
@@ -105,7 +106,7 @@
         "url": "*",
         "url-regex-safe": "*",
         "wa-sticker-formatter": "*",
-        "xfarr-api": "*",
+        "xfarr-api": "^1.0.3",
         "yargs": "*",
         "zs-extract": "*"
     },
