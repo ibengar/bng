@@ -30,7 +30,7 @@ global.APIs = {
  dhnjing : 'https://dhnjing.xyz',
  dzx : 'https://api.dhamzxploit.my.id',
  erdwepe : 'https://erdwpe-api.herokuapp.com',
- ibeng : 'https://ibeng-api.ddns.net',
+ males : 'https://malesin.xyz',
  hardianto : 'https://hardianto.xyz',
  jonaz : 'https://jonaz-api-v2.herokuapp.com',
  LeysCoder : 'https://leyscoders-api.herokuapp.com',
